@@ -7,4 +7,9 @@ public class OtpTest {
 		
 		return 123899;
 	}
+	
+	public String getName()
+	{
+		return "wakil";
+	}
 }
