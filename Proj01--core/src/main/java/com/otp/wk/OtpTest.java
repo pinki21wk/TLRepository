@@ -12,4 +12,9 @@ public class OtpTest {
 	{
 		return "wakil";
 	}
+	
+	public void m2() {
+		
+		System.out.println("m2");
+	}
 }
