@@ -12,4 +12,10 @@ public class OtpTest {
 	{
 		return "wakildfdfdsf";
 	}
+	
+	public void m4() {
+		
+		System.out.println("sddsdsdasdasdsadsadsd");
+	}
+	
 }
