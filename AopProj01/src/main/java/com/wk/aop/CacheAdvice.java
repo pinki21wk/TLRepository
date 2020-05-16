@@ -1,18 +1,36 @@
 package com.wk.aop;
 
-import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.springframework.cglib.proxy.MethodInterceptor;
-import org.springframework.cglib.proxy.MethodProxy;
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
+
+
 
 public class CacheAdvice implements MethodInterceptor {
 
-	@Override
-	public Object intercept(Object arg0, Method arg1, Object[] arg2, MethodProxy arg3) throws Throwable {
+	private Map<String,Object> cache=new HashMap<String,Object>();
+	
 
-		System.out.println("aop class");
+	@Override
+	public Object invoke(MethodInvocation invocation) throws Throwable {
 		// TODO Auto-generated method stub
-		return null;
+		String key=null;
+		Object retVal=null;
+		key=invocation.getMethod().getName()+Arrays.toString(invocation.getArguments());
+		 
+		if(!cache.containsKey(key)) {
+			retVal=invocation.proceed();
+			cache.put(key, retVal);
+			System.out.println("cache advice method");
+		}
+		return retVal;
 	}
+
+	
+
+	
 
 }
