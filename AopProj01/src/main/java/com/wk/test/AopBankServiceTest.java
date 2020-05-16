@@ -15,6 +15,7 @@ public class AopBankServiceTest {
 		
 		
 		
+		
 		 proxy=ctx.getBean("bankService",BankService.class);
 		 System.out.println(proxy.calCompoundIntr(100000, 2, 1));
 		 System.out.println(proxy.getClass()+"---------"+proxy.getClass().getSuperclass());
