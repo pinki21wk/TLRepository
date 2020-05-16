@@ -21,7 +21,6 @@ public class CacheAdvice implements MethodInterceptor {
 
 	System.out.println("entry");
 
-		System.out.println("entry");
 		String key=null;
 		Object retVal=null;
 		key=invocation.getMethod().getName()+Arrays.toString(invocation.getArguments());
