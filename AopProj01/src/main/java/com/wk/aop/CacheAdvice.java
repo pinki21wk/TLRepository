@@ -1,5 +1,5 @@
 package com.wk.aop;
 
-public class CacheAdvice {
+public class CacheAdvice implements {
 
 }
