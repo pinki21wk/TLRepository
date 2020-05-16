@@ -12,11 +12,16 @@ import org.aopalliance.intercept.MethodInvocation;
 public class CacheAdvice implements MethodInterceptor {
 
 	private Map<String,Object> cache=new HashMap<String,Object>();
+	  
 	
 
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 		// TODO Auto-generated method stub
+
+	System.out.println("entry");
+
+		System.out.println("entry");
 		String key=null;
 		Object retVal=null;
 		key=invocation.getMethod().getName()+Arrays.toString(invocation.getArguments());
@@ -26,7 +31,7 @@ public class CacheAdvice implements MethodInterceptor {
 			cache.put(key, retVal);
 			System.out.println("cache advice method");
 		}
-		return retVal;
+		return cache.get(key);
 	}
 
 	
