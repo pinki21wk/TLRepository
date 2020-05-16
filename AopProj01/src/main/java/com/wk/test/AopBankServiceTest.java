@@ -13,9 +13,6 @@ public class AopBankServiceTest {
 		ApplicationContext ctx=null;
 		ctx=new ClassPathXmlApplicationContext("/com/wk/config/applicationContext.xml");
 		
-		
-		
-		
 		 proxy=ctx.getBean("pfb",BankService.class);
 		 System.out.println(proxy.calCompoundIntr(1000, 2, 1));
 		 System.out.println(proxy.getClass()+"---------"+proxy.getClass().getSuperclass());

@@ -11,10 +11,9 @@ public class LoggingAdvice implements MethodInterceptor {
 		System.out.println("logging advice");
 Object[] args=invocation.getArguments();
      
-Object retVal=null;
+     Object retVal=null;
          if(((Float)args[0])<=0||((Float)args[1])<=0||((Float)args[2])<=0){
-        	 throw new IllegalArgumentException("invalid argument");
-        	 
+        	 throw new IllegalArgumentException("invalid argument");       	 
          }
          
 		 if(((Float)args[0])<=5000)
