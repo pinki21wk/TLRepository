@@ -14,10 +14,10 @@
 
 <array>
          <value>logAdvice</value>
-          <value>chAdvice</value>
+        <!--   <value>chAdvice</value> -->
 </array>
 
-</property>
+        </property>
 
 
 

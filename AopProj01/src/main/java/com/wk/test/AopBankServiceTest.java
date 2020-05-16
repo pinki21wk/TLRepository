@@ -14,12 +14,11 @@ public class AopBankServiceTest {
 		ctx=new ClassPathXmlApplicationContext("/com/wk/config/applicationContext.xml");
 		
 		 proxy=ctx.getBean("pfb",BankService.class);
-		 System.out.println(proxy.calCompoundIntr(1000, 2, 1));
+		 System.out.println(proxy.calSimpleIntr(100, 2f, 2f));
 		 System.out.println(proxy.getClass()+"---------"+proxy.getClass().getSuperclass());
 		
-		 System.out.println(proxy.calCompoundIntr(100000, 2, 1));
-		 System.out.println(proxy.calCompoundIntr(100000, 2, 1));
-
+		 System.out.println(proxy.calSimpleIntr(1000, 2f, 2f));
+		 System.out.println(proxy.calSimpleIntr(1000, 2f, 2f));
 	}
 
 }

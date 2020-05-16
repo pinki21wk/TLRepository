@@ -12,11 +12,11 @@ public class LoggingAdvice implements MethodInterceptor {
 Object[] args=invocation.getArguments();
      
      Object retVal=null;
-         if(((Float)args[0])<=0||((Float)args[1])<=0||((Float)args[2])<=0){
+         if((Integer)args[0] <=0||((Float)args[1])<=0||((Float)args[2])<=0){
         	 throw new IllegalArgumentException("invalid argument");       	 
          }
          
-		 if(((Float)args[0])<=5000)
+		 if(((Integer)args[0])<=5000)
 			 args[1]=((Float)args[1])-0.5f;
 		 retVal= invocation.proceed();
 		 retVal=(Float)retVal+(Float)retVal*0.07f;
