@@ -17,5 +17,10 @@ public class OtpTest {
 		
 		System.out.println("sddsdsdasdasdsadsadsd");
 	}
+	public void m2() {
+		
+		System.out.println("m2");
+	}
+	
 	
 }
