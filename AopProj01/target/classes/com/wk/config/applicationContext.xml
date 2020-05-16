@@ -5,14 +5,14 @@
 
 
 <bean id="bankService" class="com.wk.service.BankService"/>
-<bean id="pmAdvice" class="com.wk.aop.CacheAdvice"/>
+<bean id="chAdvice" class="com.wk.aop.CacheAdvice"/>
 
 <bean id="pfb" class="org.springframework.aop.framework.ProxyFactoryBean">
 <property name="target" ref="bankService"/>
 <property name="interceptorNames">
 
 <array>
-<value>pmAdvice</value>
+               <value>chAdvice</value>
 </array>
 
 </property>
