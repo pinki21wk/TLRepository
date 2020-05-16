@@ -32,5 +32,8 @@ public class CacheAdvice implements MethodInterceptor {
 		}
 		return cache.get(key);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/heads/aop-function
 }
