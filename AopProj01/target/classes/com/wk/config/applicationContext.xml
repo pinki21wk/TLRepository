@@ -12,12 +12,7 @@
 <property name="target"  ref="bankService"/>
 <property name="interceptorNames">
 
-<<<<<<< HEAD
-          <array>
-               <value>chAdvice</value>
-          </array>
-</property>
-=======
+         
 <array>
          <value>logAdvice</value>
         <!--   <value>chAdvice</value> -->
@@ -27,7 +22,6 @@
 
 
 
->>>>>>> refs/heads/aop-function
 </bean>
 
 
