@@ -15,9 +15,10 @@ public class BankServiceImpl implements BankService {
 	
 	public String transferMoney(int srcAcc, int desAcc, int amount) {
 
-	      int count=dao.deposit(srcAcc, desAcc, amount);
+	      int count=dao.deposit(srcAcc, amount);
 		       System.out.println(count);
 		return "successs";
 	}
 
+	
 }
