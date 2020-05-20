@@ -12,14 +12,18 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 <jee:jndi-lookup jndi-name="dsJndi" id="orajt"/>
-
+<jee:jndi-lookup jndi-name="pgJndi" id="pgjt"/>
 
 <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
 <constructor-arg ref="orajt"/>
 
 
 </bean>
+<bean id="pjt" class="org.springframework.jdbc.core.JdbcTemplate">
+<constructor-arg ref="pgjt"/>
 
+
+</bean>
 
 <context:component-scan base-package="com.wk.dao"/>
 </beans>
