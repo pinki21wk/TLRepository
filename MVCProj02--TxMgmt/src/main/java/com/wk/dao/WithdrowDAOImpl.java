@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class WithdrowDAOImpl implements WithdrowDAO {
-	private static final String WITHDROW_QUERY="UPDATE  DTX_ACCOUNT SET balance=balance-? WHERE accno=?"; 
+	private static final String WITHDROW_QUERY="UPDATE  dtx_account2 SET balance=balance-? WHERE accno=?"; 
 	@Autowired
 	private JdbcTemplate pjt;
 	
@@ -14,7 +14,7 @@ public class WithdrowDAOImpl implements WithdrowDAO {
 		// TODO Auto-generated method stub
 		
 		int count=pjt.update(WITHDROW_QUERY, amount,accno);
-		
+		count=2;
 		return count;
 	}
 	

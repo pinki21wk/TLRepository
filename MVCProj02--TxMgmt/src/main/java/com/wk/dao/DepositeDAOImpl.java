@@ -17,6 +17,7 @@ public class DepositeDAOImpl implements DepositeDAO {
 		// TODO Auto-generated method stub
 		
 		int count=jt.update(DEPOSITE_QUERY,amount,accno);
+		count=0;
 		return count;
 		
 	}
