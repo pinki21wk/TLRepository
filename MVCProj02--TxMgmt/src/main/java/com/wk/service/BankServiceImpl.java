@@ -23,8 +23,8 @@ public class BankServiceImpl implements BankService {
 	public String transferMoney(int srcAcc, int desAcc, int amount) {
            int count1=wDao.withdrow(srcAcc, amount);
            int count2=dao.deposit(desAcc, amount);
-           /*try {
-				Thread.sleep(10000);
+           
+           /*try {				Thread.sleep(10000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

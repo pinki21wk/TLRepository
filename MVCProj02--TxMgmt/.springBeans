@@ -7,12 +7,6 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-<<<<<<< HEAD
-=======
-		<config>src/main/java/com/wk/config/persistence-beans.xml</config>
-		<config>src/main/java/com/wk/config/service-beans.xml</config>
-		<config>src/main/java/com/wk/config/applicationContext.xml</config>
->>>>>>> refs/heads/TxMgmt--Branch
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
